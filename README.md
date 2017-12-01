@@ -1,4 +1,4 @@
 # Training
-1. First Week
+1. First Project
     * Linear Regression on Housing Data.
 
