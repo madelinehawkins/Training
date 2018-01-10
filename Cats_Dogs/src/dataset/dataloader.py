@@ -15,13 +15,8 @@ from PIL import Image
 
 import torch
 from torch.utils.data.dataset import Dataset
-from torch.utils.data import DataLoader
-from torchvision import transforms
 
 from sklearn.preprocessing import MultiLabelBinarizer
-
-IMG_PATH = 'train/'
-TRAIN_DATA = 'train/out.csv'
 
 class Cats_Dogs_Dataset(Dataset):
 
