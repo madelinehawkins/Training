@@ -33,15 +33,21 @@ class Cats_Dogs_Dataset(Dataset):
         self.y_train = self.mlb.fit_transform(tmp_df['tag'].str.split()).astype(np.float32)
 
     def __getitem__(self, index):
+        size = 32, 32
         img = Image.open(self.img_path + self.X_train[index])
         img = img.convert('RGB')
+        img = img.resize(size)
         if self.transform is not None:
             img = self.transform(img)
-
         label = torch.from_numpy(self.y_train[index])
+
         return img, label
 
     def __len__(self):
         return len(self.X_train.index)
+
+
+
+
 
 
