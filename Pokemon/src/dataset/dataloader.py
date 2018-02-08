@@ -20,7 +20,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 class Pokemon_Dataset(Dataset):
 
-    def __init__(self, csv_path, img_path, transform=None):
+    def __init__(self, csv_path, img_path, transform):
 
         tmp_df = pd.read_csv(csv_path)
         assert tmp_df['image_name'].apply(lambda x: os.path.isfile(img_path + x)).all()

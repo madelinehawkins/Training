@@ -40,8 +40,8 @@ with open('train_out.csv', 'w') as csvfile:
                 label = pokemon_name_map[label]
                 to_csv.writerow([f, label])
             is_poke = True
-        # if is_pic and is_poke:
-        #     to_csv.writerow([files, label])
+
+
 
 # Todo : Make it so it doesn't have repeated code (helper function)
 #
@@ -58,15 +58,10 @@ with open('train_out.csv', 'w') as csvfile:
 #             to_csv.writerow([file, animal])
 #         is_pic = True
 #
-# with open('test/test_out.csv', 'w') as csvfile:
-#     animal = 'None'
-#     to_csv = csv.writer(csvfile, quoting=csv.QUOTE_NONE)
-#     to_csv.writerow(['image_name', 'tag'])
-#     for file in dirs_test:
-#         if 'out' in file:
-#             is_pic = False
-#             print(file)
-#         if is_pic:
-#             to_csv.writerow([file, animal])
-#         is_pic = True
+with open('test/test_out.csv', 'w') as csvfile:
+    animal = 'None'
+    to_csv = csv.writer(csvfile, quoting=csv.QUOTE_NONE)
+    to_csv.writerow(['image_name'])
+    for file in dirs_test:
+            to_csv.writerow([file])
 
