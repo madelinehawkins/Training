@@ -5,8 +5,8 @@ save models, continue testing on models, and more to come.
 
 
 ### Todo list 
-- [ ] Make basic model
-- [ ] Set up training on basic model
+- [x] Make basic model
+- [x] Set up training on basic model
 - [ ] Set up saving weights and parameters of basic model 
 - [ ] Set up continue training on basic model 
 - [ ] Set up testing on basic model 
